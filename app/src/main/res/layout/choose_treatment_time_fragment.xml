@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_time"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginTop="5dp"
+        android:maxHeight="550dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/treatment_time_viewholder" />
+
+    <Button
+        android:id="@+id/b_back"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/montserrat"
+        android:backgroundTint="@color/gray"
+        android:text="@string/back"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/b_ready"
+        android:fontFamily="@font/montserrat"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/light_blue"
+        android:text="@string/ready"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_clock"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/b_back"
+        app:layout_constraintStart_toStartOf="@id/rv_time"
+        app:srcCompat="@drawable/clock_icon" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/b_add_time"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="@font/montserrat"
+        android:backgroundTint="@color/white"
+        android:text="@string/add_time"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_clock"
+        app:layout_constraintStart_toEndOf="@id/iv_clock"
+        app:layout_constraintTop_toTopOf="@id/iv_clock"
+        app:strokeColor="@color/gray"
+        app:strokeWidth="1dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

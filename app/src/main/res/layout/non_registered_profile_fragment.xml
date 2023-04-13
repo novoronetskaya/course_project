@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_my_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black"
+        android:text="@string/profile"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="@id/top_panel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_info"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/top_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top_panel"
+        app:srcCompat="@drawable/info_icon" />
+
+    <Button
+        android:id="@+id/b_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="18dp"
+        android:fontFamily="@font/montserrat"
+        android:backgroundTint="@color/light_blue"
+        android:text="@string/registration"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_panel" />
+
+    <TextView
+        android:id="@+id/tv_reason_to_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="19dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/need_of_registration"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/top_panel"
+        app:layout_constraintTop_toBottomOf="@id/b_sign_up" />
+</androidx.constraintlayout.widget.ConstraintLayout>

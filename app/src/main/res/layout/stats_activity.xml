@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_stats_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/stats"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="@id/iv_top_panel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/f_stats"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/iv_stats_home_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_top_panel"
+        app:navGraph="@navigation/stats_activity_navigation" />
+
+    <ImageView
+        android:id="@+id/iv_stats_home_icon"
+        android:layout_width="102dp"
+        android:layout_height="50dp"
+        android:background="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home_icon" />
+
+    <ImageView
+        android:id="@+id/iv_stats_stats_icon"
+        android:layout_width="102dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_stats_home_icon"
+        app:srcCompat="@drawable/stats_icon" />
+
+    <ImageView
+        android:id="@+id/iv_stats_kit_icon"
+        android:layout_width="102dp"
+        android:layout_height="50dp"
+        android:background="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_stats_stats_icon"
+        app:srcCompat="@drawable/kit_icon" />
+
+    <ImageView
+        android:id="@+id/iv_stats_treatment_icon"
+        android:layout_width="102dp"
+        android:layout_height="50dp"
+        android:background="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_stats_kit_icon"
+        app:srcCompat="@drawable/pill_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

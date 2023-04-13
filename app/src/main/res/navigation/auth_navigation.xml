@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcome_navigation"
+    app:startDestination="@id/welcomeFragment">
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.auth_activity.WelcomeFragment"
+        android:label="WelcomeFragment">
+        <action
+            android:id="@+id/action_welcomeFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.auth_activity.SignInFragment"
+        android:label="SignInFragment">
+        <action
+            android:id="@+id/action_signInFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.course_project.voronetskaya.view.activities.MainActivity"
+        android:label="MainActivity" />
+
+</navigation>

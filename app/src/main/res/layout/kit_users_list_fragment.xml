@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_kit_users_title"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/kit_users"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="@id/iv_top_panel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_plus"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_top_panel"
+        app:layout_constraintEnd_toEndOf="@id/iv_top_panel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plus_icon" />
+
+    <ScrollView
+        android:id="@+id/sv_graphs"
+        android:layout_width="match_parent"
+        android:layout_height="640dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_top_panel"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_independent_users"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="18dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/independent"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_independent_users"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/independent_users_viewholder" />
+
+            <TextView
+                android:id="@+id/tv_managed_users"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="18dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/managed"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_managed_users"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/dependent_users_viewholder" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_kit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:hint="@string/kit_name"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="@id/top_panel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/tv_medicine_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="18dp"
+        android:fontFamily="@font/montserrat"
+        android:text=""
+        android:inputType="textMultiLine"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_panel" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/b_details"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="177dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/details"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_medicine_name"
+        app:strokeColor="@color/gray"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/b_refills"
+        android:layout_width="177dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="17dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/refills"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:backgroundTint="@color/gray"
+        app:cornerRadius="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_medicine_name" />
+
+    <ScrollView
+        android:id="@+id/sv_medicine_info"
+        android:layout_width="match_parent"
+        android:layout_height="424dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/b_refills">
+
+        <LinearLayout
+            android:id="@+id/ll_text_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/b_refill"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_medicine_expiration_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/expiration_date"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <EditText
+                android:id="@+id/et_medicine_expiration_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/montserrat"
+                android:focusableInTouchMode="false"
+                android:text="@string/expiration_date"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/tv_medicine_producer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Производитель: "
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <EditText
+                android:id="@+id/et_medicine_producer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/producer"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/tv_medicine_remainders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/remainders"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/tv_medicine_pharm_effect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/pharm_effect"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <EditText
+                android:id="@+id/et_medicine_pharm_effect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/montserrat"
+                android:inputType="textMultiLine"
+                android:text="@string/pharm_effect"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/tv_medicine_symptom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Симптом: "
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <EditText
+                android:id="@+id/et_medicine_symptom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/symptom"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/b_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/light_blue"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/save"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/b_refill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/gray"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/refill"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

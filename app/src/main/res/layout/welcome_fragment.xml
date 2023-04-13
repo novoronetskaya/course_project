@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".view.fragments.auth_activity.WelcomeFragment">
+
+    <TextView
+        android:id="@+id/tv_start_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/start_message"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/b_sign_up"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="18dp"
+        android:backgroundTint="@color/gray"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/registration"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_start_message" />
+
+    <Button
+        android:id="@+id/b_guest"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:backgroundTint="@color/gray"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/guest"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/b_sign_up" />
+
+    <TextView
+        android:id="@+id/tv_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/sign_in"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/b_guest" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/b_graph"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/graph"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:cornerRadius="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/gray"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/b_history"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/history"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:backgroundTint="@color/gray"
+        app:cornerRadius="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="514dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_from_date" />
+
+    <TextView
+        android:id="@+id/tv_from_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/from"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@id/b_graph"
+        app:layout_constraintTop_toBottomOf="@id/b_graph" />
+
+    <TextView
+        android:id="@+id/tv_to_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/to"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@id/b_history"
+        app:layout_constraintTop_toBottomOf="@id/b_graph" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

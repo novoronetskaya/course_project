@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/stats_activity_navigation"
+    app:startDestination="@id/graphStatsFragment">
+
+    <fragment
+        android:id="@+id/graphStatsFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.stats_activity.GraphStatsFragment"
+        android:label="GraphStatsFragment" >
+        <action
+            android:id="@+id/action_graphStatsFragment_to_historyStatsFragment"
+            app:destination="@id/historyStatsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyStatsFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.stats_activity.HistoryStatsFragment"
+        android:label="HistoryStatsFragment" />
+</navigation>

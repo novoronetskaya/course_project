@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_my_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/profile"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="@id/top_panel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_info"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/montserrat"
+        app:layout_constraintBottom_toBottomOf="@id/top_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top_panel"
+        app:srcCompat="@drawable/info_icon" />
+
+    <ScrollView
+        android:id="@+id/sv_profile_info"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_panel">
+
+        <LinearLayout
+            android:id="@+id/ll_text_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/b_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/montserrat"
+                android:text="ID: "
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <EditText
+                android:id="@+id/tv_user_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/id"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/tv_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/montserrat"
+                android:text="Имя: "
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <EditText
+                android:id="@+id/tv_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/name"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/tv_surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/montserrat"
+                android:text="Фамилия: "
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <EditText
+                android:id="@+id/tv_user_surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/surname"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/tv_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/montserrat"
+                android:text="Дата рождения: "
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <EditText
+                android:id="@+id/tv_birth_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/birthday"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/tv_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/montserrat"
+                android:text="Почта: "
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <EditText
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/email"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/tv_change_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="0dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/change_email"
+                android:textColor="@color/dark_blue"
+                android:textSize="21sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_change_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="0dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/change_password"
+                android:textColor="@color/dark_blue"
+                android:textSize="21sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_delete_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/delete_account"
+        android:textColor="@color/red"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/b_save"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/light_blue"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/save"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@id/b_log_out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/b_log_out"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/gray"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/log_out"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_delete_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

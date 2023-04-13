@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "383207003093",
+    "project_id": "medicine-organiser",
+    "storage_bucket": "medicine-organiser.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383207003093:android:4b0f0033fe0e9f59a3a35c",
+        "android_client_info": {
+          "package_name": "com.course_project.voronetskaya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383207003093-5k45suh26hj6c8qvars4rjhm6l9qudfk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP6k1Sp416_AoMpoA54zUeY9bUOmWcZ7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "383207003093-5k45suh26hj6c8qvars4rjhm6l9qudfk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

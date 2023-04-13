@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/kit_activity_navigation"
+    app:startDestination="@id/kitsListFragment">
+
+    <fragment
+        android:id="@+id/kitsListFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.kit_activity.KitsListFragment"
+        android:label="KitsListFragment" >
+        <action
+            android:id="@+id/action_kitsListFragment_to_invitationsListFragment"
+            app:destination="@id/invitationsListFragment" />
+        <action
+            android:id="@+id/action_kitsListFragment_to_medicineListFragment"
+            app:destination="@id/medicineListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/invitationsListFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.kit_activity.InvitationsListFragment"
+        android:label="InvitationsListFragment" >
+        <action
+            android:id="@+id/action_invitationsListFragment_to_invitationInfoFragment"
+            app:destination="@id/invitationInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineListFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.kit_activity.MedicineListFragment"
+        android:label="MedicineListFragment" >
+        <action
+            android:id="@+id/action_medicineListFragment_to_medicineInfoFragment"
+            app:destination="@id/medicineInfoFragment" />
+        <action
+            android:id="@+id/action_medicineListFragment_to_kitUsersListFragment"
+            app:destination="@id/kitUsersListFragment" />
+        <action
+            android:id="@+id/action_medicineListFragment_to_newMedicineFragment"
+            app:destination="@id/newMedicineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineInfoFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.kit_activity.MedicineInfoFragment"
+        android:label="MedicineInfoFragment" >
+        <action
+            android:id="@+id/action_medicineInfoFragment_to_medicineRefillsFragment"
+            app:destination="@id/medicineRefillsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineRefillsFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.kit_activity.MedicineRefillsFragment"
+        android:label="MedicineRefillsFragment" />
+    <fragment
+        android:id="@+id/kitUsersListFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.kit_activity.KitUsersListFragment"
+        android:label="KitUsersListFragment" >
+        <action
+            android:id="@+id/action_kitUsersListFragment_to_inviteUserFragment"
+            app:destination="@id/inviteUserFragment" />
+        <action
+            android:id="@+id/action_kitUsersListFragment_to_addDependentUserFragment"
+            app:destination="@id/addDependentUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newMedicineFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.kit_activity.NewMedicineFragment"
+        android:label="NewMedicineFragment" />
+    <fragment
+        android:id="@+id/inviteUserFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.kit_activity.InviteUserFragment"
+        android:label="InviteUserFragment" />
+    <fragment
+        android:id="@+id/addDependentUserFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.kit_activity.AddDependentUserFragment"
+        android:label="AddDependentUserFragment" />
+    <fragment
+        android:id="@+id/invitationInfoFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.kit_activity.InvitationInfoFragment"
+        android:label="InvitationInfoFragment" />
+</navigation>

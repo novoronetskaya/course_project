@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_plus"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/montserrat"
+        app:layout_constraintBottom_toBottomOf="@id/top_panel"
+        app:layout_constraintEnd_toEndOf="@id/top_panel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plus_icon" />
+
+    <TextView
+        android:id="@+id/tv_kit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black"
+        android:text="@string/kit_category_title"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="@id/top_panel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_medicine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_filter_icon"
+        tools:listitem="@layout/viewholder_without_pause" />
+
+    <ImageView
+        android:id="@+id/iv_filter_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_panel"
+        app:srcCompat="@drawable/filter_icon" />
+
+    <ImageView
+        android:id="@+id/iv_sort_icon"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toEndOf="@id/iv_filter_icon"
+        app:layout_constraintTop_toBottomOf="@id/top_panel"
+        app:srcCompat="@drawable/sort_icon" />
+
+    <ImageView
+        android:id="@+id/iv_members_icon"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/top_panel"
+        app:layout_constraintEnd_toStartOf="@id/iv_plus"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/people_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/treatment_activity_navigation"
+    app:startDestination="@id/treatmentsListFragment">
+
+    <fragment
+        android:id="@+id/treatmentsListFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.treatment_activity.TreatmentsListFragment"
+        android:label="TreatmentsListFragment" >
+        <action
+            android:id="@+id/action_treatmentsListFragment_to_newTreatmentFragment"
+            app:destination="@id/newTreatmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newTreatmentTimeFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.treatment_activity.NewTreatmentTimeFragment"
+        android:label="NewTreatmentTimeFragment" />
+    <fragment
+        android:id="@+id/newTreatmentFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.treatment_activity.NewTreatmentFragment"
+        android:label="NewTreatmentFragment" >
+        <action
+            android:id="@+id/action_newTreatmentFragment_to_newTreatmentTimeFragment"
+            app:destination="@id/newTreatmentTimeFragment" />
+    </fragment>
+</navigation>

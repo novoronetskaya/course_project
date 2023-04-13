@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/timelineFragment">
+    <fragment
+        android:id="@+id/signUpEmailFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.main_activity.SignUpEmailFragment"
+        android:label="SignUpEmailFragment" >
+        <action
+            android:id="@+id/action_signUpEmailFragment_to_signUpCodeFragment"
+            app:destination="@id/signUpCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpCodeFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.main_activity.SignUpCodeFragment"
+        android:label="SignUpCodeFragment" >
+        <action
+            android:id="@+id/action_signUpCodeFragment_to_signUpInfoFragment"
+            app:destination="@id/signUpInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpInfoFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.main_activity.SignUpInfoFragment"
+        android:label="SignUpInfoFragment" >
+        <action
+            android:id="@+id/action_signUpInfoFragment_to_timelineFragment"
+            app:destination="@id/timelineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timelineFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.main_activity.TimelineFragment"
+        android:label="TimelineFragment" >
+        <action
+            android:id="@+id/action_timelineFragment_to_registeredProfileFragment"
+            app:destination="@id/registeredProfileFragment" />
+        <action
+            android:id="@+id/action_timelineFragment_to_nonRegisteredProfileFragment"
+            app:destination="@id/nonRegisteredProfileFragment" />
+        <action
+            android:id="@+id/action_timelineFragment_to_oneTimeTreatmentFragment"
+            app:destination="@id/oneTimeTreatmentFragment" />
+        <action
+            android:id="@+id/action_timelineFragment_to_treatmentInfoFragment"
+            app:destination="@id/treatmentInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registeredProfileFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.main_activity.RegisteredProfileFragment"
+        android:label="RegisteredProfileFragment" >
+        <action
+            android:id="@+id/action_registeredProfileFragment_to_emailResetFragment"
+            app:destination="@id/emailResetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nonRegisteredProfileFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.main_activity.NonRegisteredProfileFragment"
+        android:label="NonRegisteredProfileFragment" >
+        <action
+            android:id="@+id/action_nonRegisteredProfileFragment_to_signUpEmailFragment"
+            app:destination="@id/signUpEmailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/oneTimeTreatmentFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.main_activity.OneTimeTreatmentFragment"
+        android:label="OneTimeTreatmentFragment" />
+    <fragment
+        android:id="@+id/treatmentInfoFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.main_activity.TreatmentInfoFragment"
+        android:label="TreatmentInfoFragment" />
+    <fragment
+        android:id="@+id/emailResetFragment"
+        android:name="com.course_project.voronetskaya.view.fragments.main_activity.EmailResetFragment"
+        android:label="EmailResetFragment" />
+</navigation>
