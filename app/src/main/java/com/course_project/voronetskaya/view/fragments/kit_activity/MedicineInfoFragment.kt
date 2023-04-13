@@ -69,7 +69,7 @@ class MedicineInfoFragment : Fragment() {
                         medicine.value!!.getUnit()
                     )
                 ).setView(editText).setPositiveButton("Готово") { _, _ ->
-                    if (editText.text == null || editText.text.toString().trim() == "") {
+                    if (editText.text == null || editText.text.toString().toIntOrNull() == null) {
                         editText.error = "Введите количество"
                         return@setPositiveButton
                     }

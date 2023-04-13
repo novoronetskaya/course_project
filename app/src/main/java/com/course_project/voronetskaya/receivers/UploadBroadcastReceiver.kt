@@ -175,11 +175,19 @@ class UploadBroadcastReceiver : BroadcastReceiver() {
     }
 
     private fun isTreatmentTrueForDate(date: Date, treatment: Treatment): Boolean {
+        val startDate = dateFormatter.parse(treatment.getStartDate())!!
+        if (date < startDate) {
+            return false
+        }
+
+        if ((date.time - startDate.time) / (1000 * 60 * 60 * 24) >= treatment.getLength()) {
+            return false
+        }
+
         if (treatment.getConsumptionType() == ConsumptionType.EVERY_DAY) {
             return true
         }
 
-        val startDate = dateFormatter.parse(treatment.getStartDate())!!
         if (treatment.getConsumptionType() == ConsumptionType.EACH_N_DAYS) {
             return (date.time - startDate.time) / (1000 * 60 * 60 * 24) % treatment.getEachNDays() == 0L
         }

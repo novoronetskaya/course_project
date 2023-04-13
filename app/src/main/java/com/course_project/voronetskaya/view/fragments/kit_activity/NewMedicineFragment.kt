@@ -123,7 +123,7 @@ class NewMedicineFragment : Fragment() {
             return
         }
 
-        if (amount.text == null || amount.text.toString().trim() == "") {
+        if (amount.text == null || amount.text.toString().toDoubleOrNull() == null) {
             amount.error = "Введите количество "
             return
         }
@@ -148,7 +148,7 @@ class NewMedicineFragment : Fragment() {
             return
         }
 
-        if (remains.text == null || remains.text.toString().trim() == "") {
+        if (remains.text == null || remains.text.toString().toDoubleOrNull() == null) {
             remains.error = "Введите остаток "
             return
         }

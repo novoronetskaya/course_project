@@ -311,7 +311,7 @@ class NewTreatmentFragment : Fragment() {
             treatment = Treatment()
             treatment.setConsumptionType(ConsumptionType.EVERY_DAY)
         } else if (eachNDaysRadio.isChecked) {
-            if (eachNDaysText.text == null || eachNDaysText.text.toString().trim() == "") {
+            if (eachNDaysText.text == null || eachNDaysText.text.toString().toIntOrNull() == null) {
                 eachNDaysText.error = "Введите число "
                 return
             }
@@ -336,14 +336,12 @@ class NewTreatmentFragment : Fragment() {
             treatment.setConsumptionType(ConsumptionType.DAYS_OF_WEEK)
             treatment.setDaysOfWeek(daysOfWeek)
         } else if (cyclicRadio.isChecked) {
-            if (treatmentPeriodCycle.text == null || treatmentPeriodCycle.text.toString()
-                    .trim() == ""
-            ) {
+            if (treatmentPeriodCycle.text == null || treatmentPeriodCycle.text.toString().toIntOrNull() == null) {
                 treatmentPeriodCycle.error = "Введите срок приёма "
                 return
             }
 
-            if (pausePeriodCycle.text == null || pausePeriodCycle.text.toString().trim() == "") {
+            if (pausePeriodCycle.text == null || pausePeriodCycle.text.toString().toIntOrNull() == null) {
                 pausePeriodCycle.error = "Введите срок паузы "
             }
 
@@ -351,6 +349,9 @@ class NewTreatmentFragment : Fragment() {
             treatment.setConsumptionType(ConsumptionType.CYCLIC)
             treatment.setConsumptionPeriod(treatmentPeriodCycle.text.toString().toInt())
             treatment.setHaltPeriod(pausePeriodCycle.text.toString().toInt())
+        } else {
+            Toast.makeText(activity, "Выберите тип приёма", Toast.LENGTH_SHORT).show()
+            return
         }
 
         if (medicineNameSpinner.isVisible) {

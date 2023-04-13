@@ -33,14 +33,14 @@ class TreatmentTimeAdapter(val unit: String, var activity: Context) :
 
         init {
             timeText.text = String.format(
-                "%02d.%02d",
+                "%02d:%02d",
                 treatmentTime.getHour(),
                 treatmentTime.getMinute()
             )
             medicineUnit.text = unit
             doseText.setText(treatmentTime.getDose().toString())
             doseText.doAfterTextChanged {
-                if (doseText.text.toString().trim() != "") {
+                if (doseText.text.toString().toDoubleOrNull() == null) {
                     treatmentTime.setDose(doseText.text.toString().toDouble())
                 }
             }

@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/montserrat"
-        android:text="2.25"
+        android:hint="1"
         android:inputType="number"
         android:textColor="@color/black"
         android:textSize="21sp"
