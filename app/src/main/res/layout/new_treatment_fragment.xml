@@ -90,14 +90,29 @@
                 android:textColor="@color/black"
                 android:textSize="21sp" />
 
-            <EditText
-                android:id="@+id/et_length"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat"
-                android:hint="20"
-                android:inputType="number"
-                android:textSize="21sp" />
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="20"
+                    android:inputType="number"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/tv_length_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/days"
+                    android:textColor="@color/black"
+                    android:textSize="21sp" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/tv_treatment_type"

@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/montserrat"
-        android:hint="таб."
+        android:text="таб."
         android:textColor="@color/black"
         android:textSize="21sp"
         app:layout_constraintBottom_toBottomOf="@id/iv_background"
